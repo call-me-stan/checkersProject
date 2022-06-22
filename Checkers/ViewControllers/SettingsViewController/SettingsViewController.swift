@@ -37,7 +37,7 @@ class SettingsViewController: UIViewController {
     }
     
     private func currentTheme() {
-        if Settings.shared.theme == .dark {
+        if Settings.shared.darkTheme == true {
            self.view.backgroundColor = #colorLiteral(red: 0.5294117647, green: 0.5490196078, blue: 0.6666666667, alpha: 1)
             arrowImageView.tintColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
         } else {

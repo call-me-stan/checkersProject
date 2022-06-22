@@ -8,24 +8,25 @@
 import UIKit
 
 class Settings: NSObject {
-    enum CurrentTheme: Int {
-        case light = 10
-        case dark = 11
-    }
-    
-    enum ThemeIsSave: String {
-        case gameTheme
-    }
+//    enum CurrentTheme: Int {
+//        case light = 10
+//        case dark = 11
+//    }
+//
+//    enum ThemeIsSave: String {
+//        case gameTheme
+//    }
     
     enum GameIsSavedKeys: String {
         case saveGame
+        case darkTheme
     }
     
     static let shared = Settings()
     
     var saveGame: Bool {
         set {
-            UserDefaults.standard.set(newValue, forKey: ThemeIsSave.gameTheme.rawValue)
+            UserDefaults.standard.set(newValue, forKey: GameIsSavedKeys.saveGame.rawValue)
         }
         
         get {
@@ -33,14 +34,24 @@ class Settings: NSObject {
         }
     }
     
-    var theme: CurrentTheme {
+    var darkTheme: Bool {
         set {
-            UserDefaults.standard.set(newValue.rawValue, forKey: ThemeIsSave.gameTheme.rawValue )
+            UserDefaults.standard.set(newValue, forKey: GameIsSavedKeys.darkTheme.rawValue )
         }
         
         get {
-            return CurrentTheme(rawValue: UserDefaults.standard.integer(forKey: ThemeIsSave.gameTheme.rawValue)) ?? .light
+            return UserDefaults.standard.bool(forKey: GameIsSavedKeys.darkTheme.rawValue)
         }
     }
+    
+//    var theme: CurrentTheme {
+//        set {
+//            UserDefaults.standard.set(newValue.rawValue, forKey: ThemeIsSave.gameTheme.rawValue )
+//        }
+//
+//        get {
+//            return CurrentTheme(rawValue: UserDefaults.standard.integer(forKey: ThemeIsSave.gameTheme.rawValue)) ?? .light
+//        }
+//    }
     
 }

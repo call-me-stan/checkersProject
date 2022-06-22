@@ -23,23 +23,23 @@ class ThemeTableViewCell: UITableViewCell {
     }
     
     private func isSwitcherIsOn() {
-        if Settings.shared.theme == .light {
-            switcher.isOn = true
-        } else {
+        if Settings.shared.darkTheme == true {
             switcher.isOn = false
             currentThemeLabel.text = "dark"
+        } else {
+            switcher.isOn = true
         }
     }
     
     private func swhitchGameTheme() {
         if switcher.isOn {
             currentThemeLabel.text = "light"
-            Settings.shared.theme = .light
-            print(Settings.shared.theme)
+            Settings.shared.darkTheme = false
+            print(Settings.shared.darkTheme)
         } else {
             currentThemeLabel.text = "dark"
-            Settings.shared.theme = .dark
-            print(Settings.shared.theme)
+            Settings.shared.darkTheme = true
+            print(Settings.shared.darkTheme)
         }
     }
     

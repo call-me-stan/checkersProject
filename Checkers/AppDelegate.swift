@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print(UserDefaults.standard.object(forKey: "firsthPlayerNameLabel") ?? "")
-        print(Settings.shared.saveGame)
-        print(Settings.shared.theme)
+        print("saveGame: \(Settings.shared.saveGame)")
+        print("darkTheme: \(Settings.shared.darkTheme)")
         return true
     }
 

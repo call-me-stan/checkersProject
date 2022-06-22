@@ -38,7 +38,7 @@ class MenuViewController: UIViewController {
     }
     
     private func currentTheme() {
-        if Settings.shared.theme == .dark {
+        if Settings.shared.darkTheme == true {
             backgroundImage.image = UIImage(named: "screen_black_ipad.jpg")
         } else {
             backgroundImage.image = UIImage(named: "screen_ipad.jpg")

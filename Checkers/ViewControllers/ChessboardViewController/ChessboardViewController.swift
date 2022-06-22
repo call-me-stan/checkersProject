@@ -28,7 +28,7 @@ class ChessboardViewController: UIViewController {
     }
     
     private func currentTheme() {
-        if Settings.shared.theme == .dark {
+        if Settings.shared.darkTheme == true {
            self.view.backgroundColor = #colorLiteral(red: 0.5294117647, green: 0.5490196078, blue: 0.6666666667, alpha: 1)
         } else {
             self.view.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
@@ -56,17 +56,21 @@ class ChessboardViewController: UIViewController {
         for square in chessboard.subviews {
             square.subviews.first?.removeFromSuperview()
         }
+        
         if let data = UserDefaults.standard.object(forKey: "Checkers") as? Data {
             if let checkers = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Checker]{
                 self.checkers = checkers
             }
         }
+        
         for (index, square) in chessboard.subviews.enumerated() {
             if let checker = self.checkers.first(where: { $0.checkerNumberCell == index}) {
                 if square.subviews.isEmpty {
                     let checkerImage = CheckerImage(rawValue: checker.checkerImage) ?? .whiteChecker
                     let addChecker = checker.createChecker(checkerImage: checkerImage, size: checker.size)
                     square.addSubview(addChecker)
+//                    Chessboard().createGestureRecognizer().forEach { addChecker.addGestureRecognizer($0) }
+
                     addChecker.center = CGPoint(x: square.bounds.width / 2.0,
                                                 y: square.bounds.height / 2.0)
                 }

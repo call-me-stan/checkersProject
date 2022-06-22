@@ -66,7 +66,7 @@ class Chessboard: NSObject {
     
     //    MARK: createGesture
     
-    private func createGestureRecognizer() -> [UIGestureRecognizer] {
+     func createGestureRecognizer() -> [UIGestureRecognizer] {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressGesture(_:)))
         longPressGesture.minimumPressDuration = 0.1
         longPressGesture.delegate = self
