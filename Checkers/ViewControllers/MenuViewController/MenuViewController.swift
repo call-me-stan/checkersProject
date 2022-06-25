@@ -18,6 +18,9 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var blurEffect: UIVisualEffectView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var closeButtonView: UIView!
+    @IBOutlet weak var settingsImageView: UIImageView!
+    @IBOutlet weak var startButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +43,14 @@ class MenuViewController: UIViewController {
     private func currentTheme() {
         if Settings.shared.darkTheme == true {
             backgroundImage.image = UIImage(named: "screen_black_ipad.jpg")
+            closeButtonView.tintColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
+            settingsImageView.tintColor = .white
+            aboutButton.tintColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
         } else {
             backgroundImage.image = UIImage(named: "screen_ipad.jpg")
+            closeButtonView.tintColor = .systemBlue
+            settingsImageView.tintColor = .lightGray
+            aboutButton.tintColor = .systemBlue
         }
     }
     

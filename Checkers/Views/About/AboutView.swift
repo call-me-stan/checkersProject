@@ -26,6 +26,7 @@ class AboutView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupText()
+        currentTheme()
     }
 
     override init(frame: CGRect) {
@@ -53,5 +54,21 @@ class AboutView: UIView {
         kingPiecesLabel.text = "The last row is called the king row. If you get a piece across the board to the opponent's king row, that piece becomes a king. Another piece is placed onto that piece so it is now two pieces high. King pieces can move in both directions, forward and backward.\n\nOnce a piece is kinged, the player must wait until the next turn to jump out of the king row."
         winningTheGameHeader.text = "Winning the Game"
         winningTheGameLabel.text = "You win the game when the opponent has no more pieces or can't move (even if he/she still has pieces). If neither player can move then it is a draw or a tie."
+    }
+    
+    private func currentTheme() {
+        if Settings.shared.darkTheme == true {
+            contentView.backgroundColor = #colorLiteral(red: 0.5294117647, green: 0.5490196078, blue: 0.6666666667, alpha: 1)
+            gamePiecesAndBoardLabel.textColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
+            takingTurnLabel.textColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
+            kingPiecesLabel.textColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
+            winningTheGameLabel.textColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
+        } else {
+            contentView.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
+            gamePiecesAndBoardLabel.textColor = .black
+            takingTurnLabel.textColor = .black
+            kingPiecesLabel.textColor = .black
+            winningTheGameLabel.textColor = .black
+        }
     }
 }

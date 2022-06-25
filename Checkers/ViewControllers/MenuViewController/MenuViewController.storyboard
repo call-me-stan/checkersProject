@@ -187,6 +187,8 @@
                         <outlet property="rulesView" destination="IAv-3Y-Z8e" id="GLN-gw-EdH"/>
                         <outlet property="scoreButton" destination="FGZ-iZ-uqG" id="R0s-eh-SX5"/>
                         <outlet property="settingsButton" destination="9ne-bW-bFP" id="bQk-TO-lK5"/>
+                        <outlet property="settingsImageView" destination="dIh-2U-dLW" id="J6N-3A-xBD"/>
+                        <outlet property="startButton" destination="d38-HV-V6d" id="HlU-Li-cPT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

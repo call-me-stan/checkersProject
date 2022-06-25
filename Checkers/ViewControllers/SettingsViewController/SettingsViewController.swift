@@ -13,23 +13,20 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var arrowImageView: UIImageView!
     private var animation: CABasicAnimation?
     
+    @IBOutlet public var mainView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setAnimation()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         currentTheme()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         currentTheme()
     }
-
+    
     private func setupUI() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ThemeTableViewCell", bundle: nil),
@@ -38,7 +35,7 @@ class SettingsViewController: UIViewController {
     
     private func currentTheme() {
         if Settings.shared.darkTheme == true {
-           self.view.backgroundColor = #colorLiteral(red: 0.5294117647, green: 0.5490196078, blue: 0.6666666667, alpha: 1)
+            self.view.backgroundColor = #colorLiteral(red: 0.5294117647, green: 0.5490196078, blue: 0.6666666667, alpha: 1)
             arrowImageView.tintColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
         } else {
             self.view.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8980392157, alpha: 1)
@@ -69,20 +66,27 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            switch section {
-            case 0: return 1
-            default:
-                return 0
-            }
+        switch section {
+        case 0: return 1
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        switch indexPath.row {
-//        case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ThemeTableViewCell") as? ThemeTableViewCell else { return UITableViewCell() }
-            cell.selectionStyle = .none
-            return cell
-//        default: return UITableViewCell()
-//        }
+        //        switch indexPath.row {
+        //        case 0:
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ThemeTableViewCell") as? ThemeTableViewCell else { return UITableViewCell() }
+        cell.delegate = self
+        cell.selectionStyle = .none
+        return cell
+        //        default: return UITableViewCell()
+        //        }
+    }
+}
+
+extension SettingsViewController: ThemeTableViewCellDelegate {
+    func userSwitchTheme() {
+        currentTheme()
     }
 }

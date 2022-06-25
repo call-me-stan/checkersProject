@@ -9,7 +9,9 @@ import UIKit
 class Chessboard: NSObject {
     
     private let currentLineForChecker: [Int] = [0,1,2,5,6,7]
-        
+    var checkers = [Checker]()
+    
+    //MARK: Create chessboard
     func createBoard(with chessboard: UIView) {
         var sizeSquare: CGSize {
             return CGSize(width: chessboard.frame.size.width / 8.0, height: chessboard.frame.size.height / 8.0)
@@ -64,9 +66,67 @@ class Chessboard: NSObject {
         }
     }
     
+    //MARK: Save chessboard
+    func saveGame(with chessboard: UIView) {
+        Settings.shared.saveGame = true
+        
+        for cell in chessboard.subviews {
+            if !cell.subviews.isEmpty {
+                self.checkers.append(Checker(checkerNumberCell: (cell as? SquareView)?.numberCell ?? -1,
+                                             checkerImage: (cell.subviews.first as? CheckerImageView)?.nameImage ?? "",
+                                             size: cell.subviews.first?.bounds.size ?? .zero))
+            }
+        }
+        
+        self.checkers.forEach({
+            print($0.checkerNumberCell)
+        })
+        
+        if let data = try? NSKeyedArchiver.archivedData(withRootObject: self.checkers, requiringSecureCoding: true) {
+            UserDefaults.standard.set(data, forKey: "Checkers")
+        }
+    }
+    
+    //MARK: Reset chessboard
+    func resetGame(with chessboard: UIView) {
+        UserDefaults.standard.removeObject(forKey: "Checkers")
+        for square in chessboard.subviews {
+            square.subviews.first?.removeFromSuperview()
+            chessboard.subviews.first?.removeFromSuperview()
+        }
+        createBoard(with: chessboard)
+        Settings.shared.saveGame = false
+    }
+    
+    //MARK: Load chessboard
+    func loadBoard(with chessboard: UIView) {
+        for square in chessboard.subviews {
+            square.subviews.first?.removeFromSuperview()
+        }
+        
+        if let data = UserDefaults.standard.object(forKey: "Checkers") as? Data {
+            if let checkers = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Checker]{
+                self.checkers = checkers
+            }
+        }
+        
+        for (index, square) in chessboard.subviews.enumerated() {
+            if let checker = self.checkers.first(where: { $0.checkerNumberCell == index}) {
+                if square.subviews.isEmpty {
+                    let checkerImage = CheckerImage(rawValue: checker.checkerImage) ?? .whiteChecker
+                    let addChecker = checker.createChecker(checkerImage: checkerImage, size: checker.size)
+                    square.addSubview(addChecker)
+                    addChecker.center = CGPoint(x: square.bounds.width / 2.0,
+                                                y: square.bounds.height / 2.0)
+                    createGestureRecognizer().forEach { addChecker.addGestureRecognizer($0) }
+                }
+            }
+        }
+    }
+    
     //    MARK: createGesture
     
-     func createGestureRecognizer() -> [UIGestureRecognizer] {
+    private func createGestureRecognizer() -> [UIGestureRecognizer] {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressGesture(_:)))
         longPressGesture.minimumPressDuration = 0.1
         longPressGesture.delegate = self

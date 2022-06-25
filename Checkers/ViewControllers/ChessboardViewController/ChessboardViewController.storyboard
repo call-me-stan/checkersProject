@@ -63,17 +63,25 @@
                                     <action selector="resetGame:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FAK-c7-agc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7T-S2-Dse">
+                                <rect key="frame" x="239" y="76" width="159" height="42.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.9882352941176471" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="EVy-73-JIx" firstAttribute="leading" secondItem="6mk-kn-4H3" secondAttribute="leading" constant="32" id="0yR-Ax-9Kx"/>
                             <constraint firstItem="6mk-kn-4H3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="1mp-kd-wkJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="v7T-S2-Dse" secondAttribute="trailing" constant="16" id="7TI-aj-iaS"/>
                             <constraint firstItem="Xds-ng-2aS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="AHK-7X-3jk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6mk-kn-4H3" secondAttribute="trailing" constant="16" id="BiG-d4-d1N"/>
                             <constraint firstItem="qkG-M0-h8D" firstAttribute="height" secondItem="EVy-73-JIx" secondAttribute="height" multiplier="0.977778" id="C6t-EU-KU1"/>
                             <constraint firstItem="gra-ef-SzZ" firstAttribute="top" secondItem="6mk-kn-4H3" secondAttribute="top" constant="-4" id="DzC-bY-kta"/>
                             <constraint firstItem="qkG-M0-h8D" firstAttribute="top" secondItem="6mk-kn-4H3" secondAttribute="bottom" constant="32" id="Jo3-mh-9vE"/>
+                            <constraint firstItem="v7T-S2-Dse" firstAttribute="leading" secondItem="Xds-ng-2aS" secondAttribute="trailing" constant="16" id="L5X-QV-ia1"/>
                             <constraint firstItem="gra-ef-SzZ" firstAttribute="trailing" secondItem="6mk-kn-4H3" secondAttribute="trailing" constant="4" id="RNY-G0-Vnn"/>
                             <constraint firstItem="gra-ef-SzZ" firstAttribute="bottom" secondItem="6mk-kn-4H3" secondAttribute="bottom" constant="4" id="Sng-EA-Dpq"/>
                             <constraint firstItem="qkG-M0-h8D" firstAttribute="trailing" secondItem="6mk-kn-4H3" secondAttribute="trailing" constant="-32" id="VMt-yW-i3Y"/>
@@ -81,6 +89,8 @@
                             <constraint firstItem="6mk-kn-4H3" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="dUq-X9-1GN"/>
                             <constraint firstItem="Xds-ng-2aS" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="hO2-Wt-dT6"/>
                             <constraint firstItem="Xds-ng-2aS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="lLQ-Rq-pYc"/>
+                            <constraint firstItem="v7T-S2-Dse" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="pnE-1n-MDF"/>
+                            <constraint firstItem="v7T-S2-Dse" firstAttribute="height" secondItem="Xds-ng-2aS" secondAttribute="height" id="wlX-3Z-81O"/>
                             <constraint firstItem="EVy-73-JIx" firstAttribute="top" secondItem="6mk-kn-4H3" secondAttribute="bottom" constant="32" id="wmy-fn-zyU"/>
                         </constraints>
                     </view>
@@ -88,6 +98,8 @@
                         <outlet property="chessboard" destination="6mk-kn-4H3" id="tzq-lm-bz2"/>
                         <outlet property="firsthPlayerNameLabel" destination="Xds-ng-2aS" id="L6L-YI-ABF"/>
                         <outlet property="resetButton" destination="qkG-M0-h8D" id="fpj-R0-1It"/>
+                        <outlet property="saveButton" destination="EVy-73-JIx" id="QsY-KU-tML"/>
+                        <outlet property="timerLabel" destination="v7T-S2-Dse" id="l7i-xS-UyJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
