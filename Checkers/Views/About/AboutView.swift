@@ -25,7 +25,7 @@ class AboutView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupText()
+        setLocalization()
         currentTheme()
     }
 
@@ -45,14 +45,14 @@ class AboutView: UIView {
         addSubview(contentView)
     }
     
-    private func setupText() {
-        gamePiecesAndBoardHeader.text = "Game Pieces and Board"
-        gamePiecesAndBoardLabel.text = "Checkers is a board game played between two people on an 8x8 checked board.\n\nEach player has 12 pieces that are like flat round disks that fit inside each of the boxes on the board. The pieces are placed on every other dark square and then staggered by rows, like shown on the board.\n\nEach Checkers player has different colored pieces."
-        takingTurnHeader.text = "Taking a Turn"
-        takingTurnLabel.text = "Typically the light color pieces moves first. Each player takes their turn by moving a piece. Pieces are always moved diagonally and can be moved in the following ways:\n\n\u{2022} Diagonally in the forward direction (towards the opponent) to the next dark square.\n\n\u{2022} If there is one of the opponent's pieces next to a piece and an empty space on the other side, you jump your opponent and remove their piece. You can do multiple jumps if they are lined up in the forward direction. \n*** note: if you have a jump, you have no choice but to take it."
-        kingPiecesHeader.text = "King Pieces"
-        kingPiecesLabel.text = "The last row is called the king row. If you get a piece across the board to the opponent's king row, that piece becomes a king. Another piece is placed onto that piece so it is now two pieces high. King pieces can move in both directions, forward and backward.\n\nOnce a piece is kinged, the player must wait until the next turn to jump out of the king row."
-        winningTheGameHeader.text = "Winning the Game"
+    private func setLocalization() {
+        gamePiecesAndBoardHeader.text = "gamePiecesAndBoardHeader_text".localized
+        gamePiecesAndBoardLabel.text = "gamePiecesAndBoardLabel_text".localized
+        takingTurnHeader.text = "takingTurnHeader_text".localized
+        takingTurnLabel.text = "takingTurnLabel_text".localized
+        kingPiecesHeader.text = "kingPiecesHeader_text".localized
+        kingPiecesLabel.text = "kingPiecesLabel_text".localized
+        winningTheGameHeader.text = "winningTheGameHeader_text".localized
         winningTheGameLabel.text = "You win the game when the opponent has no more pieces or can't move (even if he/she still has pieces). If neither player can move then it is a draw or a tie."
     }
     

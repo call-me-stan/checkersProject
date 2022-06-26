@@ -17,6 +17,8 @@ class StartViewController: UIViewController {
     @IBOutlet weak var enterYourNameTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var helloLabelText: UILabel!
+    @IBOutlet weak var enterYourNameText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class StartViewController: UIViewController {
         
         navigationController?.navigationBar.isHidden = true
         
+        setLocalization()
         setupUI()
         currentTheme()
         scrollView.delegate = self
@@ -46,6 +49,13 @@ class StartViewController: UIViewController {
         } else {
             return
         }
+    }
+    
+    private func setLocalization(){
+        doneButton.setTitle("doneButton_text".localized, for: .normal)
+        helloLabelText.text = "helloLabel_text".localized
+        enterYourNameTextField.placeholder = "enterYourName_text".localized
+        enterYourNameText.text = "enterYourName_text".localized
     }
     
     private func setupUI() {

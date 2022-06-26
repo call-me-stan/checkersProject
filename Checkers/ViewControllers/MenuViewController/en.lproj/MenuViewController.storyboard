@@ -45,16 +45,16 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Js7-eu-Jr9"/>
+                                    <action selector="startButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3Dq-eL-xZv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGZ-iZ-uqG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGZ-iZ-uqG">
                                 <rect key="frame" x="103.5" y="507" width="207" height="44"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Score">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="scoreButtonPushed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bp7-co-dog"/>
+                                    <action selector="scoreButtonPushed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VrG-yZ-Lcv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmP-hn-pGm">
@@ -64,7 +64,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="aboutButtonPushed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bDG-YU-SRz"/>
+                                    <action selector="aboutButtonPushed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="f1G-o5-iaY"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBA-0t-2iY">
@@ -179,16 +179,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="aboutButton" destination="GmP-hn-pGm" id="aBl-va-e3W"/>
+                        <outlet property="aboutButton" destination="GmP-hn-pGm" id="zuB-n4-ZUN"/>
                         <outlet property="backgroundImage" destination="quv-hA-K4z" id="zyd-gw-JJj"/>
                         <outlet property="blurEffect" destination="ReF-lh-BZr" id="ACW-19-2G9"/>
                         <outlet property="closeButtonView" destination="Am3-AM-UY8" id="tuU-Hs-tYV"/>
                         <outlet property="logoImage" destination="xYD-lD-Fly" id="ZNW-fX-NOi"/>
                         <outlet property="rulesView" destination="IAv-3Y-Z8e" id="GLN-gw-EdH"/>
-                        <outlet property="scoreButton" destination="FGZ-iZ-uqG" id="R0s-eh-SX5"/>
+                        <outlet property="scoreButton" destination="FGZ-iZ-uqG" id="Bho-ae-7zP"/>
                         <outlet property="settingsButton" destination="9ne-bW-bFP" id="bQk-TO-lK5"/>
                         <outlet property="settingsImageView" destination="dIh-2U-dLW" id="J6N-3A-xBD"/>
-                        <outlet property="startButton" destination="d38-HV-V6d" id="HlU-Li-cPT"/>
+                        <outlet property="startButton" destination="d38-HV-V6d" id="2cn-nJ-yYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

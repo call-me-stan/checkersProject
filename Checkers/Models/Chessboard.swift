@@ -90,6 +90,7 @@ class Chessboard: NSObject {
     //MARK: Reset chessboard
     func resetGame(with chessboard: UIView) {
         UserDefaults.standard.removeObject(forKey: "Checkers")
+        UserDefaults.standard.removeObject(forKey: "count")
         for square in chessboard.subviews {
             square.subviews.first?.removeFromSuperview()
             chessboard.subviews.first?.removeFromSuperview()

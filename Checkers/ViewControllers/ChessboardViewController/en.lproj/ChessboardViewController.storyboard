@@ -50,7 +50,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="saveChessboard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RyU-6R-fvW"/>
+                                    <action selector="saveChessboard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xhW-sr-UII"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkG-M0-h8D">
@@ -60,10 +60,10 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="resetGame:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FAK-c7-agc"/>
+                                    <action selector="resetGame:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7By-6J-ddX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7T-S2-Dse">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7T-S2-Dse">
                                 <rect key="frame" x="239" y="76" width="159" height="42.5"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -97,8 +97,8 @@
                     <connections>
                         <outlet property="chessboard" destination="6mk-kn-4H3" id="tzq-lm-bz2"/>
                         <outlet property="firsthPlayerNameLabel" destination="Xds-ng-2aS" id="L6L-YI-ABF"/>
-                        <outlet property="resetButton" destination="qkG-M0-h8D" id="fpj-R0-1It"/>
-                        <outlet property="saveButton" destination="EVy-73-JIx" id="QsY-KU-tML"/>
+                        <outlet property="resetButton" destination="qkG-M0-h8D" id="ozE-Lb-ERk"/>
+                        <outlet property="saveButton" destination="EVy-73-JIx" id="2Mc-QH-W9K"/>
                         <outlet property="timerLabel" destination="v7T-S2-Dse" id="l7i-xS-UyJ"/>
                     </connections>
                 </viewController>

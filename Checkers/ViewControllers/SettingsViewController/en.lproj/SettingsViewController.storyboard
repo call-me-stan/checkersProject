@@ -78,6 +78,7 @@
                         <outlet property="arrowImageView" destination="bmh-kN-IId" id="Gpe-b6-7eI"/>
                         <outlet property="arrowView" destination="dCO-YR-tFH" id="Her-cC-KKx"/>
                         <outlet property="mainView" destination="5EZ-qb-Rvc" id="FkC-P1-b1A"/>
+                        <outlet property="settingsLable" destination="R2N-at-3jC" id="8tp-nw-V23"/>
                         <outlet property="tableView" destination="ytd-Sq-3BF" id="rTh-rI-f2R"/>
                     </connections>
                 </viewController>

@@ -24,6 +24,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLocalization()
         buttonsIsActive()
         currentTheme()
         
@@ -38,6 +39,12 @@ class MenuViewController: UIViewController {
         scoreButton.isEnabled = false
 //        settingsButton.isEnabled = false
         aboutButton.isEnabled = true
+    }
+    
+    private func setLocalization(){
+        startButton.setTitle("startButton_text".localized, for: .normal)
+        aboutButton.setTitle("aboutButton_text".localized, for: .normal)
+        scoreButton.setTitle("scoreButton_text".localized, for: .normal)
     }
     
     private func currentTheme() {
@@ -55,12 +62,12 @@ class MenuViewController: UIViewController {
     }
     
     private func showAlert() {
-        let alert = UIAlertController(title: "Previous game was saved", message: "Do you want to download the game?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+        let alert = UIAlertController(title: "previousGameWasSaved_text".localized, message: "wantToLoadGame_text".localized, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "yes_text".localized, style: .default, handler: { action in
             guard let chessboardViewController = ChessboardViewController.getInstanceViewController else { return }
             self.navigationController?.pushViewController(chessboardViewController, animated: true)
         }))
-        alert.addAction(UIAlertAction(title: "No", style: .destructive, handler: { action in
+        alert.addAction(UIAlertAction(title: "no_text".localized, style: .destructive, handler: { action in
             Settings.shared.saveGame = false
             
             guard let vc = ChessboardViewController.getInstanceViewController as? ChessboardViewController else { return }
@@ -79,10 +86,11 @@ class MenuViewController: UIViewController {
     }
     
     private func showAbout(){
-        UIView.animate(withDuration: 1.0,
+        UIView.animate(withDuration: 0.5,
                        delay: 0,
                        options: [.curveEaseIn]) {
             self.logoImage.alpha = 0.0
+            self.aboutButton.alpha = 0.0
             self.blurEffect.alpha = 1.0
             self.rulesView.alpha = 1.0
             self.closeButtonView.alpha = 1.0
@@ -90,10 +98,11 @@ class MenuViewController: UIViewController {
     }
     
     private func hideAbout(){
-        UIView.animate(withDuration: 1.0,
+        UIView.animate(withDuration: 0.5,
                        delay: 0,
                        options: [.curveEaseOut]) {
             self.logoImage.alpha = 1.0
+            self.aboutButton.alpha = 1.0
             self.blurEffect.alpha = 0.0
             self.rulesView.alpha = 0.0
             self.closeButtonView.alpha = 0.0
