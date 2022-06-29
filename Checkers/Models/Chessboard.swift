@@ -10,6 +10,7 @@ class Chessboard: NSObject {
     
     private let currentLineForChecker: [Int] = [0,1,2,5,6,7]
     var checkers = [Checker]()
+    var whiteTurn: Bool = true
     
     //MARK: Create chessboard
     func createBoard(with chessboard: UIView) {
@@ -57,10 +58,10 @@ class Chessboard: NSObject {
                 guard currentColor == .blackChecker, currentLineForChecker.contains(i) else { continue }
                 
                 let currentChecker = checker.createChecker(checkerImage: i < 3 ? .blackChecker : .whiteChecker, size: sizeChecker)
-                                
+                
                 square.addSubview(currentChecker)
                 currentChecker.center = checkerCenter
-
+                
                 createGestureRecognizer().forEach { currentChecker.addGestureRecognizer($0) }
             }
         }
@@ -158,7 +159,7 @@ class Chessboard: NSObject {
     
     @objc private func panGestureRecognizer(_ sender: UIPanGestureRecognizer) {
         guard let checker = sender.view, let square = checker.superview, let board = square.superview else { return }
-        
+                
         switch sender.state {
         case.began:
             board.bringSubviewToFront(square)

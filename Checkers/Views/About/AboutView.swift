@@ -53,7 +53,7 @@ class AboutView: UIView {
         kingPiecesHeader.text = "kingPiecesHeader_text".localized
         kingPiecesLabel.text = "kingPiecesLabel_text".localized
         winningTheGameHeader.text = "winningTheGameHeader_text".localized
-        winningTheGameLabel.text = "You win the game when the opponent has no more pieces or can't move (even if he/she still has pieces). If neither player can move then it is a draw or a tie."
+        winningTheGameLabel.text = "winningTheGameLabel_text".localized
     }
     
     private func currentTheme() {

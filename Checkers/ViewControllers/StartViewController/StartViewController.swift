@@ -33,7 +33,7 @@ class StartViewController: UIViewController {
         startAnimation()
         buttonIsActive()
     }
-    
+
     private func currentTheme() {
         if Settings.shared.darkTheme == true {
             backgroundImage.image = UIImage(named: "screen_black_ipad.jpg")
