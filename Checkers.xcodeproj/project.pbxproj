@@ -19,8 +19,7 @@
 		7684A10827BAD43800DDF99D /* UIViewController + CoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7684A10627BAD43800DDF99D /* UIViewController + CoreKit.swift */; };
 		7684A10927BAD43800DDF99D /* CAMediaTimingFunction + Ease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7684A10727BAD43800DDF99D /* CAMediaTimingFunction + Ease.swift */; };
 		7684A10D27BAD96900DDF99D /* UIView + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7684A10C27BAD96900DDF99D /* UIView + UI.swift */; };
-		769ABE2E2854992900BF0D6A /* CheckerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769ABE2D2854992900BF0D6A /* CheckerImageView.swift */; };
-		769ABE3028549ACC00BF0D6A /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769ABE2F28549ACC00BF0D6A /* SquareView.swift */; };
+		769F3D5428719A9B00ECC83B /* Chessboard + kingsMoves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F3D5328719A9B00ECC83B /* Chessboard + kingsMoves.swift */; };
 		76B15C9B2867685200DED787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B15C9A2867685200DED787 /* LaunchScreen.storyboard */; };
 		76B15C9C286768E500DED787 /* ChessboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B15C9E286768E500DED787 /* ChessboardViewController.storyboard */; };
 		76B15CA02867692F00DED787 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B15CA22867692F00DED787 /* MenuViewController.storyboard */; };
@@ -35,6 +34,10 @@
 		76BCF783285F2A0600ED257C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCF782285F2A0600ED257C /* SettingsViewController.swift */; };
 		76BCF78A285F3F6F00ED257C /* ThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCF788285F3F6F00ED257C /* ThemeTableViewCell.swift */; };
 		76BCF78B285F3F6F00ED257C /* ThemeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BCF789285F3F6F00ED257C /* ThemeTableViewCell.xib */; };
+		76D2D26F28708E430065436B /* Chessboard + gameIsOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D2D26E28708E430065436B /* Chessboard + gameIsOver.swift */; };
+		76D2D272287091A00065436B /* Chessboard + blackCheckersMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D2D271287091A00065436B /* Chessboard + blackCheckersMove.swift */; };
+		76D2D27428709C640065436B /* Chessboard + move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D2D27328709C640065436B /* Chessboard + move.swift */; };
+		76D2D27628709E4D0065436B /* Chessboard + whiteCheckersMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D2D27528709E4D0065436B /* Chessboard + whiteCheckersMove.swift */; };
 		76EA06D62868636100CDFF1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76EA06D12868636100CDFF1F /* Localizable.strings */; };
 		76EA06D72868636100CDFF1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76EA06D42868636100CDFF1F /* Localizable.strings */; };
 		76EA06D928686CF700CDFF1F /* String + CoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EA06D828686CF700CDFF1F /* String + CoreKit.swift */; };
@@ -54,8 +57,7 @@
 		7684A10627BAD43800DDF99D /* UIViewController + CoreKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + CoreKit.swift"; sourceTree = "<group>"; };
 		7684A10727BAD43800DDF99D /* CAMediaTimingFunction + Ease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction + Ease.swift"; sourceTree = "<group>"; };
 		7684A10C27BAD96900DDF99D /* UIView + UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + UI.swift"; sourceTree = "<group>"; };
-		769ABE2D2854992900BF0D6A /* CheckerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerImageView.swift; sourceTree = "<group>"; };
-		769ABE2F28549ACC00BF0D6A /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		769F3D5328719A9B00ECC83B /* Chessboard + kingsMoves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chessboard + kingsMoves.swift"; sourceTree = "<group>"; };
 		76B15C942867664E00DED787 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/StartViewController.storyboard; sourceTree = "<group>"; };
 		76B15C9A2867685200DED787 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76B15C9D286768E500DED787 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/ChessboardViewController.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,10 @@
 		76BCF782285F2A0600ED257C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		76BCF788285F3F6F00ED257C /* ThemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableViewCell.swift; sourceTree = "<group>"; };
 		76BCF789285F3F6F00ED257C /* ThemeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeTableViewCell.xib; sourceTree = "<group>"; };
+		76D2D26E28708E430065436B /* Chessboard + gameIsOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chessboard + gameIsOver.swift"; sourceTree = "<group>"; };
+		76D2D271287091A00065436B /* Chessboard + blackCheckersMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chessboard + blackCheckersMove.swift"; sourceTree = "<group>"; };
+		76D2D27328709C640065436B /* Chessboard + move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chessboard + move.swift"; sourceTree = "<group>"; };
+		76D2D27528709E4D0065436B /* Chessboard + whiteCheckersMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chessboard + whiteCheckersMove.swift"; sourceTree = "<group>"; };
 		76EA06D22868636100CDFF1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		76EA06D52868636100CDFF1F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
 		76EA06D828686CF700CDFF1F /* String + CoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + CoreKit.swift"; sourceTree = "<group>"; };
@@ -98,7 +104,6 @@
 				93EE89065B583EC9D4861A03 /* Pods-Checkers.debug.xcconfig */,
 				87BECF7E319C0359A4C0A3E6 /* Pods-Checkers.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -265,6 +270,18 @@
 			path = ThemeCell;
 			sourceTree = "<group>";
 		};
+		76D2D27028708E610065436B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				76D2D26E28708E430065436B /* Chessboard + gameIsOver.swift */,
+				76D2D27328709C640065436B /* Chessboard + move.swift */,
+				76D2D27528709E4D0065436B /* Chessboard + whiteCheckersMove.swift */,
+				76D2D271287091A00065436B /* Chessboard + blackCheckersMove.swift */,
+				769F3D5328719A9B00ECC83B /* Chessboard + kingsMoves.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		76EA06D02868636100CDFF1F /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,10 +312,9 @@
 		76F1E16128017598002156AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				76D2D27028708E610065436B /* Extensions */,
 				76F1E162280175AC002156AE /* Chessboard.swift */,
 				760216AD280AB64400B3F64E /* Checker.swift */,
-				769ABE2D2854992900BF0D6A /* CheckerImageView.swift */,
-				769ABE2F28549ACC00BF0D6A /* SquareView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -430,7 +446,9 @@
 				76BCF77F285DFCDF00ED257C /* AboutView.swift in Sources */,
 				7684A10927BAD43800DDF99D /* CAMediaTimingFunction + Ease.swift in Sources */,
 				76F1E163280175AC002156AE /* Chessboard.swift in Sources */,
+				76D2D27628709E4D0065436B /* Chessboard + whiteCheckersMove.swift in Sources */,
 				76B15CB72867734E00DED787 /* LanguageTableViewCell.swift in Sources */,
+				769F3D5428719A9B00ECC83B /* Chessboard + kingsMoves.swift in Sources */,
 				76EA06D928686CF700CDFF1F /* String + CoreKit.swift in Sources */,
 				76588257279D5BEA00BF699D /* StartViewController.swift in Sources */,
 				7684A10827BAD43800DDF99D /* UIViewController + CoreKit.swift in Sources */,
@@ -438,13 +456,14 @@
 				767D88C9282FB20D002C1716 /* Settings.swift in Sources */,
 				76BCF783285F2A0600ED257C /* SettingsViewController.swift in Sources */,
 				76588253279D5BEA00BF699D /* AppDelegate.swift in Sources */,
-				769ABE3028549ACC00BF0D6A /* SquareView.swift in Sources */,
 				7684A10D27BAD96900DDF99D /* UIView + UI.swift in Sources */,
 				76588255279D5BEA00BF699D /* SceneDelegate.swift in Sources */,
+				76D2D27428709C640065436B /* Chessboard + move.swift in Sources */,
 				76BCF78A285F3F6F00ED257C /* ThemeTableViewCell.swift in Sources */,
+				76D2D26F28708E430065436B /* Chessboard + gameIsOver.swift in Sources */,
 				760216AE280AB64400B3F64E /* Checker.swift in Sources */,
+				76D2D272287091A00065436B /* Chessboard + blackCheckersMove.swift in Sources */,
 				76716B0427C99BB300D28E19 /* ChessboardViewController.swift in Sources */,
-				769ABE2E2854992900BF0D6A /* CheckerImageView.swift in Sources */,
 				76B984BD284D0668004E1A7C /* ScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
